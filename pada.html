@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="Description" content="Google Analytics 資料分析實務教學，帶您實際建立 Google Analytics 的帳戶，學會如何在網站中設置程式碼、收集使用者活動資料 ( Event and Timing )、整合廣告行銷專案 ( utm )。最後學習如何閱讀統計報表並做基本的資料分析，以取得更多有用的資訊。" />
+<meta property="og:image" content="https://training.pada-x.com/images/icon-256.png" />
+<title>Google Analytics 資料分析實務課程</title>
+<link rel="stylesheet" type="text/css" href="style.css?update=9" media="all" />
+<script src="menu.js?update=4"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38123928-5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "UA-38123928-5");
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Course",
+  "name": "Google Analytics 資料分析實務",
+  "description": "實際建立 Google Analytics 帳戶，學習在網站中設置追蹤碼、收集使用者活動資料、整合廣告行銷專案。學習閱讀統計報表，並做基本的網站資料分析。",
+  "provider": {
+    "@type": "Person",
+    "name": "彭彭",
+	"sameAs": "https://training.pada-x.com/"
+  }
+}
+</script>
+</head>
+<body>
+<header><a target="_top" href="/">彭彭的課程教學</a></header>
+<nav>
+	<div class="view">
+		<div class="items">
+			<div class="item course" onclick="switchMenu('course');">
+				<img src="images/course.svg" />
+				<span class="text">所有課程</span>
+			</div><!--
+			--><div class="item online" onclick="switchMenu('online');">
+				<img src="images/youtube.png" />
+				<span class="text">線上課程</span>
+			</div><!--
+			--><a href="https://goo.gl/UAWBkw" target="_blank" class="item">
+				<img src="images/ntu.png" />
+				<span class="text">台大開課</span>
+			</a><!--
+			--><div class="item group" onclick="switchMenu('group');">
+				<img src="images/facebook.png" />
+				<span class="text">教學社團</span>
+			</div><!--
+			--><div class="item group" onclick="switchMenu('school');">
+				<img src="images/docs.png" />
+				<span class="text">彭彭學院</span>
+			</div>
+		</div>
+	</div>
+</nav>
+<div class="menu" id="menu-course">
+	<div class="view">
+		<a class="item" href="javascript-start.htm">
+			JavaScript 網頁前端入門
+		</a><!--
+		--><a class="item" href="javascript-advanced.htm">
+			JavaScript 網頁前端進階
+		</a><!--
+		--><a class="item" href="javascript-practical.htm">
+			JavaScript 網頁前端實務
+		</a><!--
+		--><a class="item" href="javascript-es6-react.htm">
+			ES6 與 React 完全攻略
+		</a><!--
+		--><a class="item" href="webpack-npm.jsp">
+			Webpack、NPM 前端專案管理
+		</a><!--
+		--><a class="item" href="python-start.htm">
+			Python 程式設計入門
+		</a><!--
+		--><a class="item" href="python-flask.jsp">
+			Python Flask 後端系統開發
+		</a><!--
+		--><a class="item" href="golang-start.htm">
+			Golang 程式設計入門
+		</a><!--
+		--><a class="item" href="google-analytics.htm">
+			Google Analytics 資料分析
+		</a><!--
+		--><a class="item" href="html-css-rwd-layout.htm">
+			HTML5、CSS3、RWD 網頁切版
+		</a><!--
+		--><a class="item" href="node-js.htm">
+			Node.js 與 Firebase 全端工程
+		</a><!--
+		--><a class="item" href="java-start.htm">
+			Java 程式設計入門
+		</a>
+	</div>
+</div>
+<div class="menu" id="menu-online">
+	<div class="view">
+		<a class="item" href="online.htm">
+			YouTube 彭彭免費線上課程
+		</a><!--
+		--><a class="item" target="_blank" href="online_premium.htm">
+			YouTube 課程會員專屬服務
+		</a><!--
+		--><a class="item" target="_blank" rel="nofollow" href="https://www.udemy.com/course/javascript-es6-react-redux/?referralCode=E08D1182009DED7B8B59">
+			React 進階線上課程
+		</a>
+	</div>
+</div>
+<div class="menu" id="menu-group">
+	<div class="view">
+		<a class="item" target="_blank" href="https://www.facebook.com/groups/python.backend.machine.learning/">
+			Python 程式設計社團
+		</a><!--
+		--><a class="item" target="_blank" href="https://www.facebook.com/groups/103104706750716/">
+			JavaScript 前端工程社團
+		</a><!--
+		--><a class="item" target="_blank" href="https://www.facebook.com/groups/270800550090725/">
+			Google Analytics 資料分析社團
+		</a>
+	</div>
+</div>
+<div class="menu" id="menu-school">
+	<div class="view">
+		<a class="item" target="_blank" href="https://www.facebook.com/cwpeng.school/">
+			追蹤 FB 專頁的最新訊息
+		</a><!--
+		--><a class="item" target="_blank" href="/docs/">
+			閱讀教學文章
+		</a>
+	</div>
+</div>
+<div class="page light">
+	<div class="view">
+		<div class="subject">Google Analytics 資料分析實務</div>
+		<div class="block">
+			<div class="title"><img src="images/about.png" /> 課程說明</div>
+			<div class="content">
+				<div>本課程將帶你認識網站的運作原理，實際建立自己的網站和 Google Analytics 帳戶，學會如何在網站中設置程式碼、收集使用者活動資料、追蹤廣告行銷專案成效。閱讀統計報表並做基本的資料分析，以取得更多有用的資訊。</div>
+			</div>
+			<div class="title"><img src="images/more.png" /> 適合對象</div>
+			<div class="content">
+				<div>任何想學習網頁資料收集與分析的人</div>
+			</div>
+			<div class="title"><img src="images/student.png" /> 學生時間</div>
+			<div class="content">
+				<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf7dhav-_Sw8J5-4OO6SZ3yPHhM03eIMiyBkjNfAdFSbT4FSA/viewform?usp=sf_link">作業一</a>、
+				<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd0XUmZG05hcxthmvfZajKs8xFmKlL1vElHdaq_rhLh7uIssw/viewform?usp=sf_link">作業二</a>
+				<br/>
+				<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScU-d8I5GFYb3FpiqmLa7sJJkksGgXZfMNWm-AlX-2Z5tf5AA/viewform?usp=sf_link">提供 GA 帳戶</a>、
+				<a target="_blank" rel="nofollow" href="https://docs.google.com/forms/d/e/1FAIpQLSd3KEnCjolOmMn8-HrGEsp3I_p_yOQhzuWj_KNQqwMP_QZ5Xw/viewform?usp=sf_link">說說你的想法</a>
+			</div>
+		</div>
+		<div class="block">
+			<div class="title"><img src="images/content.png" /> 課程內容</div>
+			<div class="content">
+				<div><a target="_blank" href="https://docs.google.com/presentation/d/11i4tXUUy9N8kU6-9Rjmd0Sq4Jn3yHK4SyGj1By29lPA/edit?usp=sharing">課程簡介</a> / <a target="_blank" href="/examples/google-analytics/tracking-code-sample.zip">追蹤碼範例</a></div>
+				<div class="separator"></div>
+				<div><a target="_blank" href="https://docs.google.com/presentation/d/1CMKWJrsjRqn0MzD0G8yNKSRDrpJK1SSXEFwdP7J-ZKc/edit?usp=sharing">GA 服務簡介</a> / <a target="_blank" href="https://docs.google.com/presentation/d/1roijYWBmEfD5XiKQF7iD81Jk_fVMSW50iDU0EXfdaWk/edit?usp=sharing">帳戶管理</a></div>
+				<div><a target="_blank" href="https://docs.google.com/presentation/d/1r_jCTw5lRAGXXZm0rNCpwS08O_EVWtX7c5AFC7lZxxU/edit?usp=sharing">建立網站、網站經營摘要</a></div>
+				<div><a target="_blank" href="https://docs.google.com/presentation/d/1rUHXhZiF-EtqlgV_KYyZbPPWNZbWMMGMGK7AAt-YIbk/edit?usp=sharing">基本運作觀念解說</a></div>
+				<div class="separator"></div>
+				<div><a target="_blank" href="https://docs.google.com/presentation/d/1jfv8-lA8a6TRk9HGFUs5IcZDtyECqkr-TAuQZSSTXK0/edit?usp=sharing">基本統計報表</a></div>
+				<div><a target="_blank" href="https://docs.google.com/presentation/d/1peYBAyz_75vCpIhaQKuUhQFw8lP0Ntr3cdUr7AnXUPQ/edit?usp=sharing">事件追蹤</a>、<a target="_blank" href="https://docs.google.com/presentation/d/1-iCJ_Dnc2poL_ZfLw6pndRjT5akM6RivxDMwVrp2R9E/edit?usp=sharing">時間追蹤</a></div>
+				<div class="separator"></div>
+				<div><a target="_blank" href="https://docs.google.com/presentation/d/1T2CNfG00OUfBF_TfuCQHwRRyVlcAilH5jzry8BTShEo/edit?usp=sharing">認識、建立轉換目標</a></div>
+				<div><a target="_blank" href="https://docs.google.com/presentation/d/1Hd5oDa3ecvJaWDl7Wpzowb3qKB2hg2Z5LAtZdfljp_A/edit?usp=sharing">線上廣告生態概論</a></div>
+				<div><a target="_blank" href="https://docs.google.com/presentation/d/1PzFz-UeUzolqJ-RaLepN4jsGyNW9pZYJzlMGcQPzQEI/edit?usp=sharing">UTM 自訂流量來源</a></div>
+				<div><a target="_blank" href="https://docs.google.com/presentation/d/1_dyZfRLTADyC7w2E2Gj1Gc7x3HY7dYX7M47MSxnHMjw/edit?usp=sharing">電子商務分析</a></div>
+				<div class="separator"></div>
+				<div>全球、個人級行銷經驗</div>
+				<div>全球、企業級行銷經驗</div>
+			</div>
+		</div>
+		<div class="join">
+			<div class="promote">參與台大實體課程<br/>學習最新技術並取得證書</div>
+			<div class="cta"><a onclick="gaCourseTracking('GA 分析')" class="button" target="_blank" href="https://train.csie.ntu.edu.tw/train/course.php?id=2151">報名實體課程</a></div>
+		</div>
+	</div>
+</div>
+<div class="page dark">
+	<div class="view">
+		<div class="subject">下一步是？</div>
+		<div class="block">
+			<div class="title">網頁版面設計</div>
+			<div class="content">
+				<div><a href="html-css-rwd-layout.htm">HTML / CSS 靜態版面設計</a></div>
+				<div><a href="html-css-rwd-layout.htm">RWD 回應式設計</a></div>
+			</div>
+		</div>
+		<div class="block">
+			<div class="title">網頁前端工程</div>
+			<div class="content">
+				<div><a href="javascript-start.htm">JavaScript 前端工程入門</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page light">
+	<div class="view">
+		<div class="subject">彭彭課程的技能樹</div>
+		<div class="course-tree">
+			<img class="full" src="images/course-tree.svg" title="彭彭課程的技能樹" />
+			<a class="link" title="Go 語言程式設計 - 入門課程" href="golang-start.htm" style="top:19.5%;left:14.5%;"></a>
+			<a class="link" title="Java 程式設計 - 入門課程" href="java-start.htm" style="top:19.5%;left:66.5%;"></a>
+			<a class="link" title="Python 程式設計 - 入門課程" href="python-start.htm" style="top:46.5%;left:19.1%;"></a>
+			<a class="link" title="JavaScript 前端工程 - 入門課程" href="javascript-start.htm" style="top:46.5%;left:40.5%;"></a>
+			<a class="link" title="Google Analytics 資料分析 - 實務課程" href="google-analytics.htm" style="top:46.5%;left:62%;"></a>
+			<a class="link" title="Python Flask 網站後端 - 教學課程" href="python-flask.jsp" style="top:77.5%;left:8.5%;"></a>
+			<a class="link" title="JavaScript 前端工程 - 實務課程" href="javascript-practical.htm" style="top:77.5%;left:29.8%;"></a>
+			<a class="link" title="React 完全攻略課程" href="javascript-es6-react.htm" style="top:77.5%;left:51.2%;"></a>
+			<a class="link" title="NPM、Webpack 前端專案管理 - 教學課程" href="webpack-npm.jsp" style="top:77.5%;left:72.6%;"></a>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="view">
+		聯絡彭彭：
+		<a target="_blank" class="contact" href="https://www.facebook.com/chaowei.peng">Facebook</a> |
+		<a target="_blank" class="contact" href="https://www.linkedin.com/in/chao-wei-peng-1bb7a368/">LinkedIn</a>
+	</div>
+</footer>
+</body>
+</html>
